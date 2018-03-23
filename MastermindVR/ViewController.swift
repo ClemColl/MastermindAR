@@ -60,78 +60,112 @@ class ViewController: UIViewController {
     
     @IBAction func createButton1(_ sender: UIButton) {
         let newTitle = incrementValue(value: sender.currentTitle!)
-        sender.setTitle(newTitle, for: .normal)
         let newImage = getImage(currentTitle: newTitle)
+        let name = (button1.tag+1) + 4 * Int(row)
+        sender.setTitle(newTitle, for: .normal)
         sender.setImage(newImage, for: .normal)
         
-        let box = SCNBox(width: 0.01, height: 0.01, length: 0.01, chamferRadius: 0)
-        let newColor = getColor(currentTitle: Int(newTitle)!)
-        box.firstMaterial?.diffuse.contents = newColor
+        if ((sceneView.scene.rootNode.childNode(withName: ("pion" + String(name)), recursively: false)) == nil) {
+            let box = SCNBox(width: 0.01, height: 0.01, length: 0.01, chamferRadius: 0)
+            let boxNode = SCNNode()
+            let defineRow = 0.04 - 0.02 * row
+            let initColor = getColor(currentTitle: Int(button1.currentTitle!)!)
+            
+            box.firstMaterial?.diffuse.contents = initColor
+            boxNode.geometry = box
+            boxNode.name = "pion" + String(name)
+            boxNode.position = SCNVector3(-0.03, defineRow , -0.2)
         
-        let boxNode = SCNNode()
-        boxNode.geometry = box
-        let defineRow = 0.04 - 0.02 * row
-        boxNode.position = SCNVector3(-0.03, defineRow , -0.2)
-        
-        sceneView.scene.rootNode.addChildNode(boxNode)
+            sceneView.scene.rootNode.addChildNode(boxNode)
+        } else {
+            let box = sceneView.scene.rootNode.childNode(withName: ("pion" + String(name)), recursively: false)
+            let newColor = getColor(currentTitle: Int(newTitle)!)
+            box?.geometry?.firstMaterial?.diffuse.contents = newColor
+        }
     }
     
     @IBAction func createButton2(_ sender: UIButton) {
         let newTitle = incrementValue(value: sender.currentTitle!)
-        sender.setTitle(newTitle, for: .normal)
         let newImage = getImage(currentTitle: newTitle)
+        let name = (button2.tag+1) + 4 * Int(row)
+        sender.setTitle(newTitle, for: .normal)
         sender.setImage(newImage, for: .normal)
         
-        let box = SCNBox(width: 0.01, height: 0.01, length: 0.01, chamferRadius: 0)
-        let newColor = getColor(currentTitle: Int(newTitle)!)
-        box.firstMaterial?.diffuse.contents = newColor
+        if ((sceneView.scene.rootNode.childNode(withName: ("pion" + String(name)), recursively: false)) == nil) {
+            let box = SCNBox(width: 0.01, height: 0.01, length: 0.01, chamferRadius: 0)
+            let boxNode = SCNNode()
+            let defineRow = 0.04 - 0.02 * row
+            let initColor = getColor(currentTitle: Int(button2.currentTitle!)!)
         
-        let boxNode = SCNNode()
-        boxNode.geometry = box
-        let defineRow = 0.04 - 0.02 * row
-        boxNode.position = SCNVector3(-0.01, defineRow , -0.2)
-        
-        sceneView.scene.rootNode.addChildNode(boxNode)
+            box.firstMaterial?.diffuse.contents = initColor
+            boxNode.geometry = box
+            boxNode.name = "pion" + String(name)
+            boxNode.position = SCNVector3(-0.01, defineRow , -0.2)
+            
+            sceneView.scene.rootNode.addChildNode(boxNode)
+        } else {
+            let box = sceneView.scene.rootNode.childNode(withName: ("pion" + String(name)), recursively: false)
+            let newColor = getColor(currentTitle: Int(newTitle)!)
+            box?.geometry?.firstMaterial?.diffuse.contents = newColor
+        }
     }
     
 
     @IBAction func createButton3(_ sender: UIButton) {
+        // Setup value et image button
         let newTitle = incrementValue(value: sender.currentTitle!)
-        sender.setTitle(newTitle, for: .normal)
         let newImage = getImage(currentTitle: newTitle)
+        let name = (button3.tag+1) + 4 * Int(row)
+        sender.setTitle(newTitle, for: .normal)
         sender.setImage(newImage, for: .normal)
         
-        let box = SCNBox(width: 0.01, height: 0.01, length: 0.01, chamferRadius: 0)
-        let newColor = getColor(currentTitle: Int(newTitle)!)
-        box.firstMaterial?.diffuse.contents = newColor
         
-        let boxNode = SCNNode()
-        boxNode.geometry = box
-        boxNode.name = "hello"
-        let defineRow = 0.04 - 0.02 * row
-        boxNode.position = SCNVector3(0.01, defineRow , -0.2)
+        if ((sceneView.scene.rootNode.childNode(withName: ("pion" + String(name)), recursively: false)) == nil) {
+            let box = SCNBox(width: 0.01, height: 0.01, length: 0.01, chamferRadius: 0)
+            let boxNode = SCNNode()
+            let defineRow = 0.04 - 0.02 * row
+            let initColor = getColor(currentTitle: Int(button3.currentTitle!)!)
+            
+            box.firstMaterial?.diffuse.contents = initColor
+            boxNode.geometry = box
+            boxNode.name = "pion" + String(name)
+            boxNode.position = SCNVector3(0.01, defineRow , -0.2)
         
-        sceneView.scene.rootNode.addChildNode(boxNode)
+            sceneView.scene.rootNode.addChildNode(boxNode)
+        } else {
+            let box = sceneView.scene.rootNode.childNode(withName: ("pion" + String(name)), recursively: false)
+            let newColor = getColor(currentTitle: Int(newTitle)!)
+            box?.geometry?.firstMaterial?.diffuse.contents = newColor
+        }
         
     }
     
     @IBAction func createButton4(_ sender: UIButton) {
+        // Setup value et image button
         let newTitle = incrementValue(value: sender.currentTitle!)
-        sender.setTitle(newTitle, for: .normal)
         let newImage = getImage(currentTitle: newTitle)
+        let name = (button4.tag+1) + 4 * Int(row)
+        sender.setTitle(newTitle, for: .normal)
         sender.setImage(newImage, for: .normal)
-
-        let box = SCNBox(width: 0.01, height: 0.01, length: 0.01, chamferRadius: 0)
-        let newColor = getColor(currentTitle: Int(newTitle)!)
-        box.firstMaterial?.diffuse.contents = newColor
-
-        let boxNode = SCNNode()
-        boxNode.geometry = box
-
-        let defineRow = 0.04 - 0.02 * row
-        boxNode.position = SCNVector3(0.03, defineRow , -0.2)
-
-        sceneView.scene.rootNode.addChildNode(boxNode)
+        
+        
+        if ((sceneView.scene.rootNode.childNode(withName: ("pion" + String(name)), recursively: false)) == nil) {
+            let box = SCNBox(width: 0.01, height: 0.01, length: 0.01, chamferRadius: 0)
+            let boxNode = SCNNode()
+            let defineRow = 0.04 - 0.02 * row
+            let initColor = getColor(currentTitle: Int(button4.currentTitle!)!)
+            
+            box.firstMaterial?.diffuse.contents = initColor
+            boxNode.geometry = box
+            boxNode.name = "pion" + String(name)
+            boxNode.position = SCNVector3(0.03, defineRow , -0.2)
+            
+            sceneView.scene.rootNode.addChildNode(boxNode)
+        } else {
+            let box = sceneView.scene.rootNode.childNode(withName: ("pion" + String(name)), recursively: false)
+            let newColor = getColor(currentTitle: Int(newTitle)!)
+            box?.geometry?.firstMaterial?.diffuse.contents = newColor
+        }
     }
     @IBAction func sendCode(_ sender: UIButton) {
         verify()
