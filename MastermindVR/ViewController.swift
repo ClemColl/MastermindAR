@@ -61,6 +61,8 @@ class ViewController: UIViewController {
     @IBAction func createButton1(_ sender: UIButton) {
         let newTitle = incrementValue(value: sender.currentTitle!)
         sender.setTitle(newTitle, for: .normal)
+        let newImage = getImage(currentTitle: newTitle)
+        sender.setImage(newImage, for: .normal)
         
         let box = SCNBox(width: 0.01, height: 0.01, length: 0.01, chamferRadius: 0)
         let newColor = getColor(currentTitle: Int(newTitle)!)
@@ -77,6 +79,8 @@ class ViewController: UIViewController {
     @IBAction func createButton2(_ sender: UIButton) {
         let newTitle = incrementValue(value: sender.currentTitle!)
         sender.setTitle(newTitle, for: .normal)
+        let newImage = getImage(currentTitle: newTitle)
+        sender.setImage(newImage, for: .normal)
         
         let box = SCNBox(width: 0.01, height: 0.01, length: 0.01, chamferRadius: 0)
         let newColor = getColor(currentTitle: Int(newTitle)!)
@@ -94,6 +98,8 @@ class ViewController: UIViewController {
     @IBAction func createButton3(_ sender: UIButton) {
         let newTitle = incrementValue(value: sender.currentTitle!)
         sender.setTitle(newTitle, for: .normal)
+        let newImage = getImage(currentTitle: newTitle)
+        sender.setImage(newImage, for: .normal)
         
         let box = SCNBox(width: 0.01, height: 0.01, length: 0.01, chamferRadius: 0)
         let newColor = getColor(currentTitle: Int(newTitle)!)
@@ -101,25 +107,30 @@ class ViewController: UIViewController {
         
         let boxNode = SCNNode()
         boxNode.geometry = box
+        boxNode.name = "hello"
         let defineRow = 0.04 - 0.02 * row
         boxNode.position = SCNVector3(0.01, defineRow , -0.2)
         
         sceneView.scene.rootNode.addChildNode(boxNode)
+        
     }
     
     @IBAction func createButton4(_ sender: UIButton) {
         let newTitle = incrementValue(value: sender.currentTitle!)
         sender.setTitle(newTitle, for: .normal)
-        
+        let newImage = getImage(currentTitle: newTitle)
+        sender.setImage(newImage, for: .normal)
+
         let box = SCNBox(width: 0.01, height: 0.01, length: 0.01, chamferRadius: 0)
         let newColor = getColor(currentTitle: Int(newTitle)!)
         box.firstMaterial?.diffuse.contents = newColor
-        
+
         let boxNode = SCNNode()
         boxNode.geometry = box
+
         let defineRow = 0.04 - 0.02 * row
         boxNode.position = SCNVector3(0.03, defineRow , -0.2)
-        
+
         sceneView.scene.rootNode.addChildNode(boxNode)
     }
     @IBAction func sendCode(_ sender: UIButton) {
@@ -145,6 +156,27 @@ class ViewController: UIViewController {
             return UIColor.green
         default:
             return UIColor.gray
+        }
+    }
+    
+    func getImage(currentTitle:String) -> UIImage {
+        let bundle = Bundle(for: type(of: self))
+        switch(currentTitle) {
+        case "1":
+            let bluePion = UIImage(named: "Blue", in: bundle, compatibleWith: self.traitCollection)
+            return bluePion!
+        case "2":
+            let redPion = UIImage(named: "Red", in: bundle, compatibleWith: self.traitCollection)
+            return redPion!
+        case "3":
+            let yellowPion = UIImage(named: "Yellow", in: bundle, compatibleWith: self.traitCollection)
+            return yellowPion!
+        case "4":
+            let greenPion = UIImage(named: "Green", in: bundle, compatibleWith: self.traitCollection)
+            return greenPion!
+        default:
+            let grayPion = UIImage(named: "Empty", in: bundle, compatibleWith: self.traitCollection)
+            return grayPion!
         }
     }
     

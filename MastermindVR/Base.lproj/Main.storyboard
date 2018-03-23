@@ -19,41 +19,41 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oqu-QW-rdC">
-                                <rect key="frame" x="0.0" y="20" width="375" height="547"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="577"/>
                             </arscnView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="JzL-po-yTq">
-                                <rect key="frame" x="0.0" y="567" width="375" height="100"/>
+                                <rect key="frame" x="0.0" y="597" width="375" height="70"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZsQ-Xg-1tI">
-                                        <rect key="frame" x="0.0" y="0.0" width="68" height="100"/>
-                                        <state key="normal" title="0">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZsQ-Xg-1tI">
+                                        <rect key="frame" x="0.0" y="0.0" width="68" height="70"/>
+                                        <state key="normal" title="0" image="Empty">
                                             <color key="titleColor" white="0.5" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
                                             <action selector="createButton1:" destination="BYZ-38-t0r" eventType="touchUpInside" id="npV-EW-FAT"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wdF-zh-O6f">
-                                        <rect key="frame" x="77" y="0.0" width="67.5" height="100"/>
-                                        <state key="normal" title="0">
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wdF-zh-O6f">
+                                        <rect key="frame" x="77" y="0.0" width="67.5" height="70"/>
+                                        <state key="normal" title="0" image="Empty">
                                             <color key="titleColor" white="0.5" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
                                             <action selector="createButton2:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zIS-Bc-QQw"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Oh-jD-ehn">
-                                        <rect key="frame" x="153.5" y="0.0" width="68" height="100"/>
-                                        <state key="normal" title="0">
+                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Oh-jD-ehn">
+                                        <rect key="frame" x="153.5" y="0.0" width="68" height="70"/>
+                                        <state key="normal" title="0" image="Empty">
                                             <color key="titleColor" white="0.5" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
                                             <action selector="createButton3:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uJ9-5i-efB"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="asa-i3-AJx">
-                                        <rect key="frame" x="230.5" y="0.0" width="67.5" height="100"/>
-                                        <state key="normal" title="0">
+                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="asa-i3-AJx">
+                                        <rect key="frame" x="230.5" y="0.0" width="67.5" height="70"/>
+                                        <state key="normal" title="0" image="Empty">
                                             <color key="titleColor" white="0.5" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
@@ -61,17 +61,15 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oqn-rF-1bK">
-                                        <rect key="frame" x="307" y="0.0" width="68" height="100"/>
-                                        <state key="normal" title="Verify">
-                                            <color key="titleColor" white="0.5" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                                        </state>
+                                        <rect key="frame" x="307" y="0.0" width="68" height="70"/>
+                                        <state key="normal" title="Verify"/>
                                         <connections>
                                             <action selector="sendCode:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jBn-Om-BwP"/>
                                         </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="100" id="MIU-KE-FWl"/>
+                                    <constraint firstAttribute="height" constant="70" id="ZtF-wI-yhq"/>
                                 </constraints>
                             </stackView>
                         </subviews>
@@ -100,4 +98,7 @@
             <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Empty" width="239" height="238"/>
+    </resources>
 </document>
