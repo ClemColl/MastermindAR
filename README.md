@@ -1,8 +1,7 @@
 # MastermindAR
 Play Mastermind in Augmented Reality using ARKit
 
-*demo video inc*
-*pics inc*
+[Preview of the Mastermind AR app](https://raw.githubusercontent.com/Zepri/MastermindAR/master/IMG_0173.PNG)
 
 ### How to make it work
 - Download/clone the repository
